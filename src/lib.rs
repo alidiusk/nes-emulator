@@ -1,3 +1,3 @@
-mod cartridge;
-mod cpu;
-mod ram;
+pub mod cartridge;
+pub mod cpu;
+pub mod ram;
