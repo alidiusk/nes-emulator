@@ -1,8 +1,10 @@
+use crate::interrupt::Interrupt;
 
 
 pub enum TickResult {
     Executing,
-    Finished
+    Finished,
+    Interrupt(Interrupt)
 }
 
 pub trait Tick {
