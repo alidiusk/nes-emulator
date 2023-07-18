@@ -1,4 +1,4 @@
-
+use super::ram::WorkRam;
 
 pub type CpuResult = Result<(), ()>;
 
@@ -21,12 +21,14 @@ pub struct Registers {
 #[derive(Debug, Clone, PartialEq)]
 pub struct Cpu {
     registers: Registers,
+    ram: WorkRam,
 }
 
 impl Cpu {
     pub fn new() -> Cpu {
         Cpu {
             registers: Registers::default(),
+            ram: WorkRam::new(),
         }
     }
 
