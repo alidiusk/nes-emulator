@@ -8,5 +8,5 @@ pub enum TickResult {
 }
 
 pub trait Tick {
-    fn tick(&mut self) -> TickResult;
+    fn tick(&mut self, current_tick: u8) -> TickResult;
 }
